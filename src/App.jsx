@@ -1,10 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import Navbar from "./components/navbar/navbar-component";
+import Home from "./components/home/home-component";
+
+import "./App.css";
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <>
+      <Navbar />
+      <Home />
+    </>
+  );
+};
 
-export default App
+export default App;
