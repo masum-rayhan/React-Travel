@@ -1,12 +1,12 @@
 import React from 'react';
-import './home-styles.scss';
+import './main.scss';
 
-const Home = () => {
+const Main = () => {
     return(
         <div className="navbar">
-            Home
+            main
         </div>
     )
 }
 
-export default Home;
+export default Main;

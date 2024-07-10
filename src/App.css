@@ -7,10 +7,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
-:root{
+:root {
   --primary-color: hsl(199, 100%, 33%);
   --Secondary-color: hsl(0, 0%, 100%);
-  --gradient-color: linear-gradient(to right, hsl(187, 85%, 43%) , hsl(199, 100%, 33%));
+  --gradient-color: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(201, 33%, 16%);
   --text-color: hsl(240, 4%, 36%);
@@ -21,39 +21,39 @@
   --cardBG: rgb(255, 255, 255);
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-li{
+li {
   list-style: none;
 }
 
-.section{
+.section {
   padding: 4rem 0 2rem;
 }
 
-.container{
+.container {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.icon{
+.icon {
   font-size: 2rem;
   cursor: pointer;
 }
 
-.flex{
+.flex {
   display: flex;
   align-items: center;
 }
 
-.grid{
+.grid {
   display: grid;
   align-items: center;
 }
 
-.btn{
+.btn {
   padding: 0.6rem 1.5rem;
   background: var(--gradient-color);
   border: none;
@@ -62,24 +62,25 @@ li{
   cursor: pointer;
 }
 
-.btn a{
+.btn a {
   color: var(--white-color);
   font-weight: 500;
 }
 
-.btn:hover{
+.btn:hover {
   background: var(--Secondary-color);
 }
 
-img, video{
+img,
+video {
   width: 100%;
   height: auto;
 }
 
-input{
+input {
   font-size: 100%;
 }
 
-body{
+body {
   background: var(--bodyColor);
 }

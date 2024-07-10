@@ -3,7 +3,7 @@ import { MdOutlineTravelExplore } from "react-icons/md";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
 
-import "./navbar-styles.scss";
+import "./navbar.scss";
 
 const Navbar = () => {
   const [active, setActive] = useState('navBar');
