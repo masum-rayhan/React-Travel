@@ -1,11 +1,12 @@
 import React from 'react';
 import './home.scss';
 
-const Home = () => {
+export const Home = () => {
     return(
-        <div className="navbar">
-            Home
-        </div>
+        <section className="home">
+            <div className="overlay"></div>
+            <div className="video"></div>
+        </section>
     )
 }
 

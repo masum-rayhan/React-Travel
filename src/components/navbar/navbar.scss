@@ -1,109 +1,184 @@
-:root{
-    --primary-color: hsl(199, 100%, 33%);
-    --Secondary-color: hsl(0, 0%, 100%);
-    --gradient-color: linear-gradient(to right, hsl(187, 85%, 43%) , hsl(199, 100%, 33%));
-    --white-color: hsl(0, 0%, 100%);
-    --black-color: hsl(201, 33%, 16%);
-    --text-color: hsl(240, 4%, 36%);
-    --whiteColorDeam: hsl(0, 0%, 93%);
-    --greyText: rgb(190, 190, 190);
-    --inputColor: rgb(239, 239, 239);
-    --bodyColor: rgb(240, 240, 246);
-    --cardBG: rgb(255, 255, 255);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-color: hsl(199, 100%, 33%);
+  --Secondary-color: hsl(0, 0%, 100%);
+  --gradient-color: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(201, 33%, 16%);
+  --text-color: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  background: var(--gradient-color);
+  border: none;
+  border-radius: 3rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn a {
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: var(--Secondary-color);
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: 100%;
+}
+
+body {
+  background: var(--bodyColor);
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--whiteColorDeam);
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
+
+  .logo {
+    color: var(--black-color);
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      font-size: 25px;
+      color: var(--primary-color);
+      transform: translateY(5px);
+    }
   }
 
-  .header{
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--whiteColorDeam);
-    width: 100%;
-    padding: 1rem;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
+  @media screen and (max-width: 768px) {
+    .navBar {
+      position: absolute;
+      background: var(--whiteColorDeam);
+      height: max-content;
+      width: 80%;
+      top: -500rem;
+      border-radius: 1rem;
+      left: 50%;
+      padding: 1rem;
+      transform: translate(-50%);
+      z-index: 2000;
+      box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+      transition: 0.5s ease-in-out;
 
-    .logo{
-        color: var(--blackColor);
-        font-weight: 600;
-        cursor: pointer;
-        align-items: center;
+      .navLists {
+        flex-direction: column;
         justify-content: center;
+        width: 100%;
+        padding: 0.5rem 0;
+        margin: auto;
 
-        .icon{
-            font-size: 25px;
-            color: var(--primary-color);
-            transform: translateY(5px);
-        }
-    }
+        .navList {
+          padding: 0.5rem 0;
 
-    @media screen and (max-width: 768px) {
-        .navBar{
-            position: absolute;
-            background: var(--whiteColorDeam);
-            height: max-content;
-            width: 80%;
-            top: -500rem;
-            border-radius: 1rem;
-            left: 50%;
-            padding: 1rem;
-            transform: translate(-50%);
-            z-index: 2000;
-            box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
-            transition: 0.1s ease-in-out;
+          .navLink {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            font-weight: 600;
 
-
-            .navLists{
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                padding: .5rem 0;
-                margin: auto;
-
-                .navItem{
-                    padding: 0.5rem 0;
-
-                    .navLink{
-                        color: var(--text-color);
-                        font-size: 0.9rem;
-                        font-weight: 600;
-
-                        &:hover{
-                            color: var(--primary-color);
-                        }
-                    }
-                }
-
-                .btn{
-                    margin-top: 1rem;
-
-                    a{
-                        font-weight: 600;
-                        color: var(--white-color);
-                    }
-                }
+            &:hover {
+              color: var(--primary-color);
             }
-
-            .closeNavbar{
-                position: absolute;
-                top: 1rem;
-                right: 1.5rem;
-                color: var(--primary-color);
-            }
+          }
         }
 
-        .activeNavbar{
-            top: 7rem;
-        }
-    }
+        .btn {
+          margin-top: 1rem;
 
-    .toggleNavbar{
-        .icon{
-            font-size: 25px;
-            color: var(--primary-color);
+          a {
+            font-weight: 600;
+            color: var(--white-color);
+          }
         }
+      }
+
+      .closeNavbar {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        color: var(--primary-color);
         &:hover{
             color: var(--Secondary-color);
         }
+      }
+    }
+
+    .activeNavbar {
+      top: 7rem;
     }
   }
+
+  .toggleNavbar {
+    .icon {
+      font-size: 25px;
+      color: var(--primary-color);
+    }
+    &:hover.icon {
+      color: var(--Secondary-color);
+    }
+  }
+}
